@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список оголошень</title>
+</head>
+<style>
+    body {
+        display: flex;
+        flex-direction: column;
+        background-size: cover;
+        background-position: center;
+        background-image: url("data:image/jpeg;base64,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");
+    }
+
+    img {
+        width: 25px;
+        height: 20px;
+
+
+
+    }
+
+    .btn-home {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50px;
+        width: 150px;
+        height: 45px;
+        background: whitesmoke;
+        color: rgb(11, 13, 13);
+        font-family: Impact;
+
+    }
+
+    .click {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    p {
+        font-family: Impact;
+    }
+</style>
+
+<body>
+
+    <div class="click">
+        <a href="{% url 'blog:home' %}" class="btn-home">← На Головну</a>
+    </div>
+
+
+    <h1
+        style="display:flex;justify-content: center; font-family: Impact;color: rgb(255, 191, 0);-webkit-text-stroke: 1.5px rgb(160, 115, 0);">
+        Вітаю вас, шановні відвідувачи</h1>
+    <h2
+        style="display:flex;justify-content: center; font-family: Impact;color: whitesmoke; -webkit-text-stroke: 1px black; text-stroke: 1px black; margin-left: -25px;">
+        Сьогодніша наша тема - <br>
+        це як технології вплинули на світ !
+    </h2>
+
+    <h3
+        style="font-family: Impact; color: rgb(255, 191, 0);-webkit-text-stroke: 1.5px rgb(160, 115, 0); display: flex;flex-direction: row; justify-content: center;">
+        Вони розділяються на два типа:
+        <br>
+    </h3>
+
+    <div
+        style="display: flex; justify-content: space-around; flex-direction: row; color: whitesmoke; -webkit-text-stroke: 1px black; text-stroke: 1px black; font-size: 25px; ">
+
+        <p> 1.Інформаційні
+            <img src="data:image/png;base64,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"
+                alt="">
+            <br>
+            (більш детально в розділлі Статті)
+        </p>
+        <p> 2.Механічні
+            <img src="https://w7.pngwing.com/pngs/990/949/png-transparent-setting-gear-cog-engine-cogwheel-wheel-3d-icon.png"
+                alt="">
+            <br>
+            (більш детально в розділлі Статті)
+        </p>
+
+    </div>
+
+    {% if user.is_authenticated %}
+    <a href="{% url 'advert_create' %}" class="btn btn-success"
+        style="display: flex; justify-content: center; background-color: whitesmoke; width: 100%; color: black; border-radius: 15%; font-family: Impact;">
+        + Створити Оголошення
+    </a>
+    {% endif %}
+
+
+
+    <h1 style="color: whitesmoke; display: flex; justify-content: center; font-family: Impact;">Оголошення</h1>
+
+    {% if adverts %}
+    <ul>
+        {% for advert in adverts %}
+        <li style="
+            margin: 20px auto;
+            width: 70%;
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 10px;
+        ">
+            <strong>{{ advert.title }}</strong><br>
+            {{ advert.content }}<br>
+            Автор: {{ advert.author.username }} |
+                {{ advert.created_at }}
+
+            {% if user.is_authenticated and advert.author == user %}
+
+            <div style="margin-top: 10px;">
+                    <a href="{% url 'advert_edit' advert.pk %}" style="text-decoration: none; 
+color: white; 
+                           background-color: #007BFF; 
+                           padding: 5px 10px; 
+                           border-radius: 5px;
+                       ">
+                        Редагувати
+                    </a>
+
+            <a href="{% url 'advert_delete' advert.id %}" style="
+        display:inline-block;
+        margin-top:10px;
+        background:#ff4d4d;
+        color:white;
+        padding:6px 12px;
+        border-radius:5px;
+        text-decoration:none;
+       ">
+                Видалити
+            </a>
+            {% endif %}
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>Оголошень ще немає.</p>
+    {% endif %}
+
+
+</body>
+
+</html>

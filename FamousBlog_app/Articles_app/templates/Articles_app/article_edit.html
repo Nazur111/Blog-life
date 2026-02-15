@@ -1,0 +1,16 @@
+
+<body style="background-color: grey;">
+{% block content %}
+    
+<h2 style="font-family: Impact ; display: flex; justify-content: center; color: goldenrod;">Редагування статті</h2>
+
+<form method="post" style="display: flex; justify-content: center;align-items: center; flex-direction: column; font-family: Impact;color: cornsilk; -webkit-text-stroke: 1px rgb(18, 17, 17);">
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button type="submit" style="background-color: greenyellow;">Зберегти</button>
+</form>
+
+<a href="{% url 'articles' %}" style="width:110px;height: 55px; background-color: gold; padding: 5px; margin-left: 570px; border-radius: 50px; font-size: 15px;">Назад до списку статей</a>
+{% endblock %}
+</body>

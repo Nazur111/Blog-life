@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Додати статтю</title>
+</head>
+<style>
+    body{
+         background: slategray;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        }
+    
+    .btn_tic{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    }
+
+    .icl_list{
+display: flex;
+justify-content: center;
+background-color: whitesmoke;
+font-size: 20px;
+font-family: Impact;
+color: rgb(11, 13, 13);
+border-radius: 10px;
+width: 100px;
+
+    }
+
+h1{
+    font-family: Impact;
+    color: goldenrod;
+}
+
+.save{
+    background-color: greenyellow;
+    font-family: Impact;
+}
+
+
+</style>
+<body>
+
+<h1>Додати статтю</h1>
+
+<form method="post" style="display: flex; justify-content: center; align-items: center; flex-direction: column; font-family: Impact;">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save">Зберегти</button>
+</form>
+<div class="btn_tic">
+<a href="{% url 'articles' %}" class="icl_list">⬅ Назад</a>
+</div>
+
+
+</body>
+</html>
+

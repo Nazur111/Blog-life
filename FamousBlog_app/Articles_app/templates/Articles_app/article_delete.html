@@ -1,0 +1,23 @@
+<style>
+.krest {
+ background-color: black; 
+ color: whitesmoke;
+}
+</style>
+
+<body style="display: flex; justify-content: center;flex-direction:column;background-color: grey; align-items: center; font-family: Impact;">
+    
+{% block content %}
+<h2 style="color: goldenrod;">Видалити статтю</h2>
+
+<p style="color: whitesmoke;">Ви дійсно хочете видалити статтю: "<strong style="color: goldenrod;">{{ article.title }}</strong>"?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" style="background-color: brown; color: whitesmoke;">Так, видалити</button>
+    <a href="{% url 'articles' %}" class="krest">Скасувати</a>
+</form>
+{% endblock %}
+
+</body>
+

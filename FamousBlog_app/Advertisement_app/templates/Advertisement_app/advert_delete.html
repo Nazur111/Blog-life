@@ -1,0 +1,28 @@
+<style>
+.krest {
+ background-color: black; 
+ color: whitesmoke;
+ padding: 6px 12px;
+ text-decoration: none;
+ border-radius: 4px;
+}
+</style>
+
+<body style="display: flex; justify-content: center; flex-direction:column; background-color: grey; align-items: center; font-family: Impact;">
+    
+<h2 style="color: goldenrod;">Видалити оголошення</h2>
+
+<p style="color: whitesmoke;">
+    Ви дійсно хочете видалити оголошення:
+    "<strong style="color: goldenrod;">{{ advert.title }}</strong>"?
+</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" style="background-color: brown; color: whitesmoke;">
+        Так, видалити
+    </button>
+    <a href="{% url 'head' %}" class="krest">Скасувати</a>
+</form>
+
+</body>

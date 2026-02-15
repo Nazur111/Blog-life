@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    body{
+    background-size: 155%;    
+      background-position: center; 
+       background-image: url("data:image/jpeg;base64,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");
+}
+
+.art{
+    display: flex;
+    justify-content: center;
+    color: gold;
+    -webkit-text-stroke: 1px rgb(44, 32, 3);
+    margin-left: -75px;
+}
+.info{
+    display: flex;
+    font-family: Impact;
+    justify-content: center;
+    font-size: 20px;
+    gap: 10px;
+}
+.information{
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    font-family: Impact;
+}
+.cards_first{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.card_one{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 90px;
+    background-color: whitesmoke;
+}
+.card_two{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 90px;
+    background-color: whitesmoke;
+}
+.card_three{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 90px;
+    background-color: whitesmoke;
+    color: black;
+}
+.mechanic{
+    display: flex;
+    justify-content: center;
+     color: whitesmoke;
+    -webkit-text-stroke: 1px black;
+    font-size: 25px;
+    font-family: Impact;
+}
+p{
+    font-size: 20px;
+    font-family: Impact;
+}
+
+.click{
+  margin-left: 145px;
+  margin-top: -130px;
+}
+
+
+.btn-home{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: snow;
+    font-family: Impact;
+    color:rgb(11, 13, 13);
+    margin-top: 120px;
+    margin-left: -150px;
+}
+
+.art_create{
+display: flex;
+justify-content: center;
+background-color: snow;
+font-size: 20px;
+font-family: Impact;
+color: rgb(11, 13, 13);
+padding: 5px;
+border-radius: 10px;
+}
+
+.btn_artic{
+    display: flex;
+    justify-content: center;
+    margin-right: 20px;
+    margin-top: 50px;
+   
+}
+
+.btn-success {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    background-color: white;
+   font-size: 20px;
+   font-family: Impact;
+   color: black;
+
+}
+
+
+
+
+
+
+</style>
+<body>
+
+<div class="click">
+    <a href="{% url 'blog:home' %}" class="btn-home">
+        ← На Головну
+    </a>
+
+    <h1 class="art">Ще раз вітаю</h1>
+
+    <div style="display: flex; justify-content: space-evenly; color: gold; font-family: Impact; -webkit-text-stroke: 1px rgb(44, 32, 3);">
+        <div class="info">
+            <p>
+                1.Інформаційні технології - <br>
+                це технології , завдяки яким<br>
+                ми можем шукати інформацію,<br>
+                наприклад інтернет .
+            </p>
+        </div>
+
+        <p>
+            2.Механічні технології - <br>
+            це технології , які спростили нам життя <br>
+            за допомогою шестерень і поршнів,<br>
+            наприклад автомобілі.
+        </p>
+    </div>
+
+    <h3 class="information">Різновиди Інформаційних технологій :</h3>
+
+    <div class="cards_first">
+        <div class="card_one">
+            <img src="https://img.icons8.com/ios-filled/50/tiktok.png">
+            <p> - Tik Tok</p>
+        </div>
+        <div class="card_two">
+            <img src="https://img.icons8.com/ios-filled/50/youtube-play.png">
+            <p> - YouTube</p>
+        </div>
+        <div class="card_three">
+            <img src="https://img.icons8.com/ios-filled/50/google-logo.png">
+            <p> - Google</p>
+        </div>
+    </div>
+
+    <h3 class="mechanic">Різновиди Механічних технологій :</h3>
+
+    <div class="cards_first">
+        <div class="card_one">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDny4_trTvEoMdh-Ywtwvpzu6sBw7iRd6qazp4rmTj&s"
+                 style="height:50px;width:50px;border-radius:5px;">
+            <p> - Автомобілі</p>
+        </div>
+        <div class="card_two">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJOnN1vAVN2tKE3QaONAspV2sel_Os9Dp2eQ&s"
+                 style="height:50px;width:50px;border-radius:5px;">
+            <p> - Кораблі</p>
+        </div>
+        <div class="card_three">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwFBpS3EnQSdM9mBBqNZeulRv4JudpgUgiZzL2-hbrhw&s"
+                 style="height:50px;width:50px;border-radius:5px;">
+            <p> - Літаки</p>
+        </div>
+    </div>
+</div>
+
+{% if user.is_authenticated %}
+    <div class="btn_artic">
+        <a href="{% url 'article_create' %}" class="btn-success">
+            + Створити статтю
+        </a>
+    </div>
+{% endif %}
+
+<hr style="margin-top: 30px;">
+
+<h2 style="text-align:center; color:white;">Список статей</h2>
+
+{% if articles %}
+    {% for article in articles %}
+        <div style="
+            margin: 20px auto;
+            width: 70%;
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 10px;
+        ">
+
+            <h3>
+                {{ article.title }}
+                {% if article.status == 'draft' %}
+                    <span style="color: orange;">(Чернетка)</span>
+                {% endif %}
+            </h3>
+
+            <p>{{ article.content }}</p>
+
+            <small>
+                Автор: {{ article.author }} |
+                {{ article.created_at }}
+            </small>
+
+            {% if user.is_authenticated and article.author == user %}
+                <div style="margin-top: 10px; display: flex; gap: 10px;">
+
+                    <a href="{% url 'article_edit' article.pk %}"
+                       style="text-decoration:none;
+                              color:white;
+                              background-color:#007BFF;
+                              padding:5px 10px;
+                              border-radius:5px;">
+                        Редагувати
+                    </a>
+
+                    <a href="{% url 'article_delete' article.pk %}"
+                       style="text-decoration:none;
+                              color:whitesmoke;
+                              background-color:#87220d;
+                              padding:5px 10px;
+                              border-radius:5px;">
+                        Видалити
+                    </a>
+
+                    {% if article.status == 'draft' %}
+                        <a href="{% url 'article_publish' article.pk %}"
+                           style="text-decoration:none;
+                                  color:black;
+                                  background-color:gold;
+                                  padding:5px 10px;
+                                  border-radius:5px;">
+                            Опублікувати
+                        </a>
+                    {% endif %}
+
+                </div>
+            {% endif %}
+
+        </div>
+    {% endfor %}
+{% else %}
+    <p style="text-align:center; color:white;">
+        Статей ще немає
+    </p>
+{% endif %}
+
+</body>
+</html>
